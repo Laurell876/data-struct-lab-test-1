@@ -1,0 +1,21 @@
+package labtestpractise;
+
+public class LinkedList {
+	private Node head;
+
+	public Node getHead() {
+		return head;
+	}
+
+	public void setHead(Node head) {
+		this.head = head;
+	}
+
+	public LinkedList(Node head) {
+		this.head = head;
+	}
+	public LinkedList() {
+		head=null;
+	}
+	
+}

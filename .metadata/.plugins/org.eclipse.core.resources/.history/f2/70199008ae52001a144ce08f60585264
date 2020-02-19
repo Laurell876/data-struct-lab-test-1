@@ -1,0 +1,77 @@
+package labtestpractise;
+
+public class LinkedList {
+	private Node head;
+
+	public Node getHead() {
+		return head;
+	}
+
+	public void setHead(Node head) {
+		this.head = head;
+	}
+
+	public LinkedList(Node head) {
+		this.head = head;
+	}
+	public LinkedList() {
+		head=null;
+	}
+	
+	//dont include this in notes
+	public boolean isFull() {
+		//implementation ignored
+		return false;
+	}
+	
+	public void addToFront(int d) {
+		Node temp = new Node();
+		temp.setData(d);
+		temp.setNextNode(null);
+		if(isFull()) {
+			System.out.println("List is full");
+			return;
+		}
+		if(head == null) {
+			head = temp;
+		}
+		else {
+			temp.setNextNode(head);
+			head = temp;
+		}
+		
+	}
+	
+	public void addToMiddle(int d) {
+		Node temp = new Node();
+		temp.setData(d);
+		
+		if(isFull()) {
+			System.out.println("List is full");
+			return;
+		}
+		else {
+			if(head == null) {
+				head = temp;
+				return;
+			}
+			temp.setNextNode(head.getNextNode());
+			head.setNextNode(temp);
+		}
+	}
+	
+	public void display() {
+		if(head==null) {
+			System.out.println("The list is empty");
+		}
+		else {
+			Node temp = new Node();
+			temp = head;
+			while(temp!=null) {
+				System.out.println("Linked list value: "+temp.getData());
+				temp = temp.getNextNode();
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,14 @@
+package labtestpractise;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		Node nodetest = new Node();
+		LinkedList list = new LinkedList();
+		System.out.println(nodetest.getData());
+		System.out.println(list.getHead());
+		
+		list.addToFront(1);
+	}
+
+}

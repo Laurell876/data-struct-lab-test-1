@@ -1,0 +1,10 @@
+package labtestpractise;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		Node nodetest = new Node();
+		System.out.println(nodetest.getData());
+	}
+
+}
